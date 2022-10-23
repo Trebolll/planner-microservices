@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -16,6 +17,11 @@
                   <project path="$PROJECT_DIR$/planner-config" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/planner-gateway" name="planner-gateway">
+                <projects>
+                  <project path="$PROJECT_DIR$/planner-gateway" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
@@ -25,6 +31,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/planner-config" />
+            <option value="$PROJECT_DIR$/planner-gateway" />
             <option value="$PROJECT_DIR$/planner-server" />
           </set>
         </option>
@@ -35,6 +42,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/planner-config" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/planner-gateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/planner-gateway" />
           </set>
         </option>
       </GradleProjectSettings>
