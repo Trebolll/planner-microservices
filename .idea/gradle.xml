@@ -3,11 +3,38 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/planner-server" name="planner-server">
+                <projects>
+                  <project path="$PROJECT_DIR$/planner-server" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/planner-config" name="planner-config">
+                <projects>
+                  <project path="$PROJECT_DIR$/planner-config" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/planner-config" />
+            <option value="$PROJECT_DIR$/planner-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/planner-config" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/planner-config" />
           </set>
         </option>
       </GradleProjectSettings>
