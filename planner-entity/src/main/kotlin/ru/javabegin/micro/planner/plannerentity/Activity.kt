@@ -24,10 +24,13 @@ class Activity {
     @Column(updatable = false)
     val uuid : String? = null // создается только один раз с помощью триггера в БД
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    val user: User? = null
+    @Column(name = "user_id")
+    private val userId:Long? = null
+
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @MapsId
+//    @JoinColumn(name = "user_id", referencedColumnName = "id")
+//    val user: User? = null
 
     override fun equals(o: Any?): Boolean {
         if (this === o) return true

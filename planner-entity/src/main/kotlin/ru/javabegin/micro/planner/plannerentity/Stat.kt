@@ -23,11 +23,14 @@ class Stat{     // в этой таблице всего 1 запись, кот�
     @Column(name = "uncompleted_total", updatable = false)
     val uncompletedTotal : Long? = null // значение задается в триггере в БД
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @MapsId
-    @JoinColumn(name = "user_id", referencedColumnName = "id") // по каким полям связывать (foreign key)
-    val user: User? = null
+    @Column(name = "user_id")
+    private val userId:Long? = null
+
+//    @OneToOne(fetch = FetchType.LAZY)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @MapsId
+//    @JoinColumn(name = "user_id", referencedColumnName = "id") // по каким полям связывать (foreign key)
+//    val user: User? = null
 
 
     override fun equals(o: Any?): Boolean {

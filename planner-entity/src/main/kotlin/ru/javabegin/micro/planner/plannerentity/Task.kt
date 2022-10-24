@@ -37,10 +37,13 @@ class Task {
     @JoinColumn(name = "category_id", referencedColumnName = "id") // по каким полям связывать (foreign key)
     val category: Category? = null
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "id") // по каким полям связывать (foreign key)
-    val user : User? = null // для какого пользователя задача
+    @Column(name = "user_id")
+    private val userId:Long? = null
+
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "user_id", referencedColumnName = "id") // по каким полям связывать (foreign key)
+//    val user : User? = null // для какого пользователя задача
 
     override fun equals(o: Any?): Boolean {
         if (this === o) return true
